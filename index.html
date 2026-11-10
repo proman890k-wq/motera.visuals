@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<meta name="theme-color" content="#5a1425">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Эдуард Эрнесто Мамиконян — фотограф · motera.visuals</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Noto+Serif+Armenian:wght@400;500&family=Noto+Sans+Armenian:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#f4ede1;--ivory:#faf6ee;--beige:#e3d3b8;--sand:#c9b08a;--wine:#5a1425;--wine2:#7a1c33;--ink:#18110f;--mut:#6f6159;--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--cream:#f4ede1;--ivory:#faf6ee;--beige:#e3d3b8;--sand:#c9b08a;--wine:#5a1425;--wine2:#7a1c33;--ink:#18110f;--mut:#6f6159;--serif:"Cormorant Garamond","Noto Serif Armenian",Georgia,"Times New Roman",serif;--sans:"Jost","Noto Sans Armenian","Helvetica Neue",Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;background:var(--cream)}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.75;overflow-x:hidden}
@@ -134,86 +135,151 @@ footer b{display:block;font:italic 500 28px var(--serif);letter-spacing:0;text-t
 .ct a.cc:hover{background:var(--wine);color:var(--cream);transform:translateX(8px)}
 .ct a.cc:hover svg{stroke:var(--beige)}.ct a.cc:hover small{color:var(--beige)}.ct a.cc:hover .ar{color:var(--cream)}.ct a.cc:hover::before{border-color:rgba(227,211,184,.5)}
 @media(max-width:800px){.box{padding:34px 22px}.ct a.cc{padding:18px}}
+.lang{display:flex;gap:2px}
+.lang button{background:transparent;border:1px solid transparent;color:var(--cream);font:400 11px var(--sans);letter-spacing:.16em;padding:6px 9px;cursor:pointer;transition:.3s}
+.lang button:hover{color:var(--sand)}
+.lang button.on{border-color:var(--sand)}
+nav.s .lang button{color:var(--ink)}nav.s .lang button.on{border-color:var(--wine);color:var(--wine)}
+@media(max-width:800px){.rec{top:84px}}
+a,button{-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+.btn{min-height:48px}
+.burger,.fab{display:none}
+nav .logo,nav .lang,nav .burger{position:relative;z-index:2}
+#lb::after{content:"\2715";position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:20px;color:var(--cream);font-size:22px}
+@media(hover:none){.fig::after{opacity:1;transform:none;font-size:15px;padding:30px 12px 10px}.fig:hover img{transform:none}.row:hover{padding-left:0;background:none}.ct a.cc:hover{transform:none}.btn:hover{background:var(--sand);color:var(--ink)}.btn.o:hover{background:transparent;color:var(--cream)}}
+@media(max-width:800px){
+nav.s{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
+nav .wrap{height:60px;padding:0 14px 0 18px}
+.logo{font-size:19px}
+.lang{margin-left:auto}
+.lang button{padding:7px 7px;font-size:10px;letter-spacing:.1em}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:12px 8px;margin-left:4px;cursor:pointer}
+.burger i{display:block;width:22px;height:1.5px;background:var(--cream);transition:.35s}
+nav.s .burger i{background:var(--ink)}
+.links{display:flex!important;position:fixed;left:0;right:0;top:0;bottom:0;background:var(--wine);flex-direction:column;align-items:center;justify-content:center;gap:30px;font-size:16px;opacity:0;pointer-events:none;transition:opacity .4s;z-index:1}
+.links a,nav.s .links a{color:var(--cream)}
+body.menu{overflow:hidden}
+body.menu .links{opacity:1;pointer-events:auto}
+body.menu nav .logo{color:var(--cream)}
+body.menu nav .burger i{background:var(--cream)}
+body.menu nav .lang button{color:var(--cream)}
+body.menu .burger i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+body.menu .burger i:nth-child(2){opacity:0}
+body.menu .burger i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.wrap{padding:0 18px}
+.hero{min-height:100svh}
+.hero .wrap{padding-bottom:64px}
+h1{font-size:clamp(40px,13vw,64px);margin:14px 0 16px}
+.hero p{font-size:16px}
+.hero .btn,.hero .btn.o{display:block;width:100%;text-align:center;margin:12px 0 0;padding:16px 20px}
+.mono{width:54px;height:54px;font-size:22px;margin-bottom:18px}
+.rec{top:76px;right:22px}
+.hero .bg::before{width:520px;height:520px;margin-top:-300px;right:-210px;opacity:.6}
+section{padding:64px 0}
+.sub{margin-bottom:34px}
+.strip{font-size:18px;padding:30px 0}
+.grid{columns:2 140px;column-gap:10px}
+.fig{margin-bottom:10px}
+.fig i{top:8px;left:10px;font-size:15px}
+.quote{padding:110px 0}
+.row{grid-template-columns:44px 1fr;gap:6px 14px;padding:26px 0}
+.row h3{font-size:26px}
+.about{gap:44px}
+.frame img{max-height:520px;object-fit:cover}
+.oc{gap:44px}
+.box{padding:30px 20px}
+form .btn{width:100%;text-align:center;justify-self:stretch}
+.ct a.cc{padding:16px;gap:14px}
+.ct a.cc b{font-size:22px}
+.ct a.cc small{letter-spacing:.1em;overflow-wrap:anywhere}
+.ct a.cc svg{width:38px;height:38px}
+footer{padding:36px 18px calc(36px + 70px + env(safe-area-inset-bottom,0px))}
+.fab{display:flex;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;width:56px;height:56px;border-radius:50%;background:var(--wine);border:1px solid var(--sand);align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(24,17,15,.35)}
+.fab svg{width:30px;height:30px}
+}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.step{padding-right:0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}h1 .l span{transform:none}.fade0{opacity:1}}
 </style>
 </head>
 <body>
 <nav id="nv"><div class="wrap"><a href="#top" class="logo">motera.visuals</a>
-<div class="links"><a href="#works">Работы</a><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#about">Обо мне</a><a href="#order">Заказ</a></div></div></nav>
+<div class="links"><a href="#works" data-i="n1">Работы</a><a href="#services" data-i="n2">Услуги</a><a href="#process" data-i="n3">Процесс</a><a href="#about" data-i="n4">Обо мне</a><a href="#order" data-i="n5">Заказ</a></div><div class="lang"><button data-l="en">EN</button><button data-l="ru">RU</button><button data-l="hy">ՀԱՅ</button></div><button class="burger" aria-label="Menu"><i></i><i></i><i></i></button></div></nav>
 
 <header class="hero" id="top"><div class="bg"></div><div class="frm"></div><div class="rec"><i></i>REC <b id="tc" style="font-weight:400">00:00:00</b></div><div class="wrap"><div class="mono fade0">ЭМ</div><br>
-<div class="eyebrow fade0">Фотограф · Ереван</div>
-<h1><span class="l"><span>Эдуард</span></span><span class="l"><span>Эрнесто</span></span><span class="l"><span>Мамиконян</span></span></h1>
-<p class="fade0">Автомобили, портреты и природа. Свет, эмоции и характер в каждом кадре.</p>
-<div class="fade0"><a class="btn" href="#order">Заказать съёмку</a><a class="btn o" href="#works">Портфолио</a></div>
-</div><div class="scroll">Листайте</div></header>
+<div class="eyebrow fade0" data-i="eb">Фотограф · Ереван</div>
+<h1><span class="l"><span data-i="a1">Эдуард</span></span><span class="l"><span data-i="a2">Эрнесто</span></span><span class="l"><span data-i="a3">Мамиконян</span></span></h1>
+<p class="fade0" data-i="hp">Автомобили, портреты и природа. Свет, эмоции и характер в каждом кадре.</p>
+<div class="fade0"><a class="btn" href="#order" data-i="b1">Заказать съёмку</a><a class="btn o" href="#works" data-i="b2">Портфолио</a></div>
+</div><div class="scroll" data-i="sc">Листайте</div></header>
 
-<div class="strip film"><div>Автосъёмка &nbsp;·&nbsp; Портрет &nbsp;·&nbsp; Лайфстайл &nbsp;·&nbsp; Природа &nbsp;·&nbsp; Золотой час &nbsp;·&nbsp; Автосъёмка &nbsp;·&nbsp; Портрет &nbsp;·&nbsp; Лайфстайл &nbsp;·&nbsp; Природа &nbsp;·&nbsp; Золотой час &nbsp;·&nbsp; Автосъёмка &nbsp;·&nbsp; Портрет &nbsp;·&nbsp; Лайфстайл &nbsp;·&nbsp; Природа &nbsp;·&nbsp; Золотой час &nbsp;·&nbsp; Автосъёмка &nbsp;·&nbsp; Портрет &nbsp;·&nbsp; Лайфстайл &nbsp;·&nbsp; Природа &nbsp;·&nbsp; Золотой час &nbsp;·&nbsp;</div></div>
+<div class="strip film"><div data-i="strip" data-rep="4">Автосъёмка &nbsp;·&nbsp; Портрет &nbsp;·&nbsp; Лайфстайл &nbsp;·&nbsp; Природа &nbsp;·&nbsp; Золотой час</div></div>
 
 <section id="works"><div class="wrap">
-<div class="orn rv">Portfolio</div><div class="eyebrow rv" style="display:none">Избранное</div><h2 class="rv">Мои <em>работы</em></h2>
-<p class="sub rv">Кадры, в которых свет рассказывает историю. Нажмите на фото, чтобы открыть его крупнее.</p>
+<div class="orn rv" data-i="orn">Portfolio</div><div class="eyebrow rv" style="display:none">Избранное</div><h2 class="rv" data-i="wh">Мои <em>работы</em></h2>
+<p class="sub rv" data-i="ws">Кадры, в которых свет рассказывает историю. Нажмите на фото, чтобы открыть его крупнее.</p>
 <div class="grid">
-<div class="fig rv" data-t="Закат"><i>01</i><img data-p="p2" alt="Toyota Altezza на закате"></div>
-<div class="fig rv" data-t="Детали"><i>02</i><img data-p="p1" alt="Диск и конфетти"></div>
-<div class="fig rv" data-t="За кадром"><i>03</i><img data-p="p3" alt="Съёмка на закате"></div>
-<div class="fig rv" data-t="У воды"><i>04</i><img data-p="p4" alt="Съёмка у водопада"></div>
-<div class="fig rv" data-t="В лесу"><i>05</i><img data-p="p5" alt="Съёмка у ручья"></div>
-<div class="fig rv" data-t="Встреча"><i>06</i><img data-p="p6" alt="Лошадь в горах"></div>
-<div class="fig rv" data-t="Контровой свет"><i>07</i><img data-p="p7" alt="Съёмка на вершине"></div>
-<div class="fig rv" data-t="Туман"><i>08</i><img data-p="p8" alt="Горные хребты"></div>
-<div class="fig rv" data-t="В горах"><i>09</i><img data-p="p9" alt="Портрет с лошадью"></div>
-<div class="fig rv" data-t="На выезде"><i>10</i><img data-p="p10" alt="Съёмка в горах"></div>
+<div class="fig rv" data-t="Закат" data-ti="c1"><i>01</i><img data-p="p2" alt="Toyota Altezza на закате"></div>
+<div class="fig rv" data-t="Детали" data-ti="c2"><i>02</i><img data-p="p1" alt="Диск и конфетти"></div>
+<div class="fig rv" data-t="За кадром" data-ti="c3"><i>03</i><img data-p="p3" alt="Съёмка на закате"></div>
+<div class="fig rv" data-t="У воды" data-ti="c4"><i>04</i><img data-p="p4" alt="Съёмка у водопада"></div>
+<div class="fig rv" data-t="В лесу" data-ti="c5"><i>05</i><img data-p="p5" alt="Съёмка у ручья"></div>
+<div class="fig rv" data-t="Встреча" data-ti="c6"><i>06</i><img data-p="p6" alt="Лошадь в горах"></div>
+<div class="fig rv" data-t="Контровой свет" data-ti="c7"><i>07</i><img data-p="p7" alt="Съёмка на вершине"></div>
+<div class="fig rv" data-t="Туман" data-ti="c8"><i>08</i><img data-p="p8" alt="Горные хребты"></div>
+<div class="fig rv" data-t="В горах" data-ti="c9"><i>09</i><img data-p="p9" alt="Портрет с лошадью"></div>
+<div class="fig rv" data-t="На выезде" data-ti="c10"><i>10</i><img data-p="p10" alt="Съёмка в горах"></div>
 </div></div></section>
 
-<div class="quote film"><div class="wrap"><q class="rv">Фотография — это то, что остаётся, когда свет уходит</q><span class="rv">Эдуард Мамиконян</span></div></div>
+<div class="quote film"><div class="wrap"><q class="rv" data-i="q">Фотография — это то, что остаётся, когда свет уходит</q><span class="rv" data-i="qa">Эдуард Мамиконян</span></div></div>
 
 <section id="services" class="dark"><div class="wrap">
-<div class="eyebrow rv">Что я снимаю</div><h2 class="rv">Услуги</h2>
-<p class="sub rv">Стоимость зависит от задачи и локации. Напишите, и я сделаю расчёт.</p>
+<div class="eyebrow rv" data-i="sve">Что я снимаю</div><h2 class="rv" data-i="svh">Услуги</h2>
+<p class="sub rv" data-i="svs">Стоимость зависит от задачи и локации. Напишите, и я сделаю расчёт.</p>
 <div class="list">
-<div class="row rv"><div class="n">I</div><h3>Автосъёмка</h3><p>Фото и видео автомобилей на закате, в городе или на локации. Ракурсы, детали, атмосфера.</p></div>
-<div class="row rv"><div class="n">II</div><h3>Портрет и лайфстайл</h3><p>Съёмка людей и пар. Естественные эмоции, продуманный свет и образ.</p></div>
-<div class="row rv"><div class="n">III</div><h3>Природа и выезд</h3><p>Съёмка в горах, у воды, в лесу. Пейзажи, путешествия, активный отдых.</p></div>
-<div class="row rv"><div class="n">IV</div><h3>Контент для бренда</h3><p>Фото и видео для соцсетей, рекламы и каталогов в едином стиле.</p></div>
+<div class="row rv"><div class="n">I</div><h3 data-i="s1">Автосъёмка</h3><p data-i="s1d">Фото и видео автомобилей на закате, в городе или на локации. Ракурсы, детали, атмосфера.</p></div>
+<div class="row rv"><div class="n">II</div><h3 data-i="s2">Портрет и лайфстайл</h3><p data-i="s2d">Съёмка людей и пар. Естественные эмоции, продуманный свет и образ.</p></div>
+<div class="row rv"><div class="n">III</div><h3 data-i="s3">Природа и выезд</h3><p data-i="s3d">Съёмка в горах, у воды, в лесу. Пейзажи, путешествия, активный отдых.</p></div>
+<div class="row rv"><div class="n">IV</div><h3 data-i="s4">Контент для бренда</h3><p data-i="s4d">Фото и видео для соцсетей, рекламы и каталогов в едином стиле.</p></div>
 </div></div></section>
 
 <section id="process"><div class="wrap">
-<div class="eyebrow rv">Как это работает</div><h2 class="rv">Ход <em>работы</em></h2>
-<p class="sub rv">Простой и понятный путь от первого сообщения до готовых кадров.</p>
+<div class="eyebrow rv" data-i="pre">Как это работает</div><h2 class="rv" data-i="prh">Ход <em>работы</em></h2>
+<p class="sub rv" data-i="prs">Простой и понятный путь от первого сообщения до готовых кадров.</p>
 <div class="steps">
-<div class="step rv"><div class="n">01</div><h3>Заявка</h3><p>Вы пишете мне в WhatsApp или Telegram и коротко описываете идею.</p></div>
-<div class="step rv"><div class="n">02</div><h3>Обсуждение</h3><p>Выбираем локацию, время и стиль, согласуем детали и стоимость.</p></div>
-<div class="step rv"><div class="n">03</div><h3>Съёмка</h3><p>Снимаю в лучшем свете, направляю и создаю нужное настроение.</p></div>
-<div class="step rv"><div class="n">04</div><h3>Результат</h3><p>Отбираю и обрабатываю лучшие кадры, затем передаю вам готовые файлы.</p></div>
+<div class="step rv"><div class="n">01</div><h3 data-i="p1">Заявка</h3><p data-i="p1d">Вы пишете мне в WhatsApp или Telegram и коротко описываете идею.</p></div>
+<div class="step rv"><div class="n">02</div><h3 data-i="p2">Обсуждение</h3><p data-i="p2d">Выбираем локацию, время и стиль, согласуем детали и стоимость.</p></div>
+<div class="step rv"><div class="n">03</div><h3 data-i="p3">Съёмка</h3><p data-i="p3d">Снимаю в лучшем свете, направляю и создаю нужное настроение.</p></div>
+<div class="step rv"><div class="n">04</div><h3 data-i="p4">Результат</h3><p data-i="p4d">Отбираю и обрабатываю лучшие кадры, затем передаю вам готовые файлы.</p></div>
 </div></div></section>
 
 <section id="about"><div class="wrap about">
 <div class="frame rv"><img data-p="p4" alt="Эдуард на съёмке"></div>
-<div class="rv"><div class="eyebrow">Фотограф</div><h2>Обо <em>мне</em></h2>
-<p>Меня зовут Эдуард Мамиконян. Снимаю на Canon, работаю как с фотографией, так и с видео.</p>
-<p>Люблю золотой час, живой свет и кадры с настроением. Готов выехать на любую локацию, чтобы получить тот самый результат.</p>
-<div class="sign">Эдуард Эрнесто Мамиконян</div>
-<a class="btn" style="background:var(--wine);border-color:var(--wine);color:var(--cream)" href="#order">Обсудить проект</a></div>
+<div class="rv"><div class="eyebrow" data-i="abe">Фотограф</div><h2 data-i="abh">Обо <em>мне</em></h2>
+<p data-i="ab1">Меня зовут Эдуард Мамиконян. Снимаю на Canon, работаю как с фотографией, так и с видео.</p>
+<p data-i="ab2">Люблю золотой час, живой свет и кадры с настроением. Готов выехать на любую локацию, чтобы получить тот самый результат.</p>
+<div class="sign" data-i="sign">Эдуард Эрнесто Мамиконян</div>
+<a class="btn" style="background:var(--wine);border-color:var(--wine);color:var(--cream)" href="#order" data-i="abb">Обсудить проект</a></div>
 </div></section>
 
 <section id="order" class="order"><div class="wrap oc">
-<div class="rv"><div class="eyebrow">Заявка</div><h2>Заказать <em>съёмку</em></h2>
-<p class="sub" style="margin-bottom:30px">Заполните форму, и откроется WhatsApp с готовым сообщением. Останется нажать «Отправить».</p>
+<div class="rv"><div class="eyebrow" data-i="ode">Заявка</div><h2 data-i="odh">Заказать <em>съёмку</em></h2>
+<p class="sub" style="margin-bottom:30px" data-i="ods">Заполните форму, и откроется WhatsApp с готовым сообщением. Останется нажать «Отправить».</p>
 <div class="box"><form id="f">
-<div class="fld"><input id="n" placeholder="Ваше имя" required></div>
-<div class="fld"><select id="t"><option>Автосъёмка</option><option>Портрет / лайфстайл</option><option>Природа / выезд</option><option>Контент для бренда</option><option>Другое</option></select></div>
-<div class="fld"><input id="d" placeholder="Желаемая дата и место"></div>
-<div class="fld"><textarea id="m" placeholder="Расскажите о задаче"></textarea></div>
-<a class="btn" id="wa" href="https://wa.me/37433999071" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+<div class="fld"><input id="n" placeholder="Ваше имя" data-ip="phn" required></div>
+<div class="fld"><select id="t"><option data-i="o1">Автосъёмка</option><option data-i="o2">Портрет / лайфстайл</option><option data-i="o3">Природа / выезд</option><option data-i="o4">Контент для бренда</option><option data-i="o5">Другое</option></select></div>
+<div class="fld"><input id="d" placeholder="Желаемая дата и место" data-ip="phd"></div>
+<div class="fld"><textarea id="m" placeholder="Расскажите о задаче" data-ip="phm"></textarea></div>
+<a class="btn" id="wa" href="https://wa.me/37433999071" target="_blank" rel="noopener" data-i="wa">Отправить в WhatsApp</a>
 </form></div></div>
-<div class="ct rv" style="align-self:center"><div class="eyebrow" style="margin-bottom:20px">Или напишите напрямую</div>
+<div class="ct rv" style="align-self:center"><div class="eyebrow" style="margin-bottom:20px" data-i="or">Или напишите напрямую</div>
 <a class="cc" href="https://wa.me/37433999071" target="_blank" rel="noopener"><svg viewBox='0 0 48 48'><path d='M24 6a18 18 0 0 0-15.5 27L6 42l9.3-2.4A18 18 0 1 0 24 6z'/><path d='M17 17c0 8 6 14 14 14l2-3-4-2-2 1.5c-2-1-4-3-5-5l1.5-2-2-4z'/></svg><span><b>WhatsApp</b><small>+374 33 999071</small></span><span class="ar">→</span></a>
 <a class="cc" href="https://t.me/Eduard_mamikon" target="_blank" rel="noopener"><svg viewBox='0 0 48 48'><path d='M42 8L6 22l10 4 4 12 6-7 9 7z'/><path d='M16 26l18-12-14 16'/></svg><span><b>Telegram</b><small>@Eduard_mamikon</small></span><span class="ar">→</span></a>
 <a class="cc" href="https://instagram.com/motera.visuals" target="_blank" rel="noopener"><svg viewBox='0 0 48 48'><rect x='7' y='7' width='34' height='34' rx='10'/><circle cx='24' cy='24' r='8'/><circle cx='34' cy='14' r='1.5'/></svg><span><b>Instagram</b><small>@motera.visuals</small></span><span class="ar">→</span></a>
 </div></div></section>
 
-<footer><b>motera.visuals</b>© 2026 Эдуард Эрнесто Мамиконян</footer>
+<footer><b>motera.visuals</b>© 2026 <span data-i="foot">Эдуард Эрнесто Мамиконян</span></footer>
+<a class="fab" href="https://wa.me/37433999071" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox='0 0 48 48' fill='none' stroke='#f4ede1' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M24 6a18 18 0 0 0-15.5 27L6 42l9.3-2.4A18 18 0 1 0 24 6z'/><path d='M17 17c0 8 6 14 14 14l2-3-4-2-2 1.5c-2-1-4-3-5-5l1.5-2-2-4z'/></svg></a>
 <div id="lb"><img alt=""></div>
 <script>
 /* ===== ВСЕ ФОТО САЙТА В ОДНОМ МЕСТЕ =====
@@ -243,16 +309,39 @@ function sc(){nv.classList.toggle('s',window.scrollY>60)}sc();window.addEventLis
 var els=document.querySelectorAll('.rv');
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 els.forEach(function(el,i){el.style.transitionDelay=(i%3)*0.12+'s';io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+var bg=document.querySelector('.burger');bg.onclick=function(){document.body.classList.toggle('menu')};
+document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu')})});
 var lb=document.getElementById('lb'),li=lb.querySelector('img');
 document.querySelectorAll('.fig').forEach(function(f){f.onclick=function(){li.src=f.querySelector('img').src;lb.style.display='flex'}});
 lb.onclick=function(){lb.style.display='none'};
+var LANG='ru',MSG={ru:['Здравствуйте, Эдуард! Меня зовут ','.\nУслуга: ','\nДата и место: ','не указано'],en:['Hello, Eduard! My name is ','.\nService: ','\nDate and place: ','not specified'],hy:['Բարև, Էդուարդ։ Իմ անունը ','է։\nԾառայություն՝ ','\nԱմսաթիվ և վայր՝ ','նշված չէ']};
 var wa=document.getElementById('wa');
 function upd(){var g=function(x){return document.getElementById(x).value};
-var s='Здравствуйте, Эдуард! Меня зовут '+(g('n')||'...')+'.\nУслуга: '+g('t')+'\nДата и место: '+(g('d')||'не указано')+(g('m')?'\n'+g('m'):'');
+var M=MSG[LANG];var s=M[0]+(g('n')||'...')+M[1]+g('t')+M[2]+(g('d')||M[3])+(g('m')?'\n'+g('m'):'');
 wa.href='https://wa.me/37433999071?text='+encodeURIComponent(s)}
 ['n','t','d','m'].forEach(function(i){var el=document.getElementById(i);el.addEventListener('input',upd);el.addEventListener('change',upd)});upd();
 wa.addEventListener('click',function(e){var n=document.getElementById('n');if(!n.value.trim()){e.preventDefault();n.focus();n.style.borderColor='#a01c3a'}});
 document.getElementById('f').onsubmit=function(e){e.preventDefault()};
+var D={en:{eb:"Photographer · Yerevan",a1:"Eduard",a2:"Ernesto",a3:"Mamikonyan",hp:"Cars, portraits and nature. Light, emotion and character in every frame.",b1:"Book a shoot",b2:"Portfolio",sc:"Scroll",strip:"Car shoots &nbsp;·&nbsp; Portraits &nbsp;·&nbsp; Lifestyle &nbsp;·&nbsp; Nature &nbsp;·&nbsp; Golden hour",n1:"Work",n2:"Services",n3:"Process",n4:"About",n5:"Order",orn:"Portfolio",wh:"My <em>work</em>",ws:"Frames where light tells the story. Tap a photo to open it larger.",c1:"Sunset",c2:"Details",c3:"Behind the scenes",c4:"By the water",c5:"In the forest",c6:"Encounter",c7:"Backlight",c8:"Mist",c9:"In the mountains",c10:"On location",q:"Photography is what remains when the light is gone",qa:"Eduard Mamikonyan",sve:"What I shoot",svh:"Services",svs:"Price depends on the task and location. Message me and I’ll prepare a quote.",s1:"Car photography",s1d:"Photo and video of cars at sunset, in the city or on location. Angles, details, atmosphere.",s2:"Portrait & lifestyle",s2d:"People and couples. Natural emotions, thoughtful light and styling.",s3:"Nature & trips",s3d:"Shoots in the mountains, by the water, in the forest. Landscapes, travel, outdoor life.",s4:"Brand content",s4d:"Photo and video for social media, ads and catalogs in a consistent style.",pre:"How it works",prh:"The <em>process</em>",prs:"A simple path from your first message to finished photos.",p1:"Request",p1d:"Message me on WhatsApp or Telegram and briefly describe your idea.",p2:"Discussion",p2d:"We choose the location, time and style, and agree on details and price.",p3:"Shoot",p3d:"I shoot in the best light, guide you and create the right mood.",p4:"Result",p4d:"I select and edit the best shots, then deliver the final files.",abe:"Photographer",abh:"About <em>me</em>",ab1:"My name is Eduard Mamikonyan. I shoot on Canon, working with both photo and video.",ab2:"I love the golden hour, natural light and frames with mood. I’m ready to travel to any location to get exactly the result you want.",sign:"Eduard Ernesto Mamikonyan",abb:"Discuss a project",ode:"Request",odh:"Book a <em>shoot</em>",ods:"Fill in the form and WhatsApp will open with a ready message. Just press Send.",o1:"Car photography",o2:"Portrait / lifestyle",o3:"Nature / trip",o4:"Brand content",o5:"Other",wa:"Send via WhatsApp",or:"Or write directly",foot:"Eduard Ernesto Mamikonyan",phn:"Your name",phd:"Preferred date and place",phm:"Tell me about your project",title:"Eduard Ernesto Mamikonyan — photographer · motera.visuals"},
+hy:{eb:"Լուսանկարիչ · Երևան",a1:"Էդուարդ",a2:"Էռնեստո",a3:"Մամիկոնյան",hp:"Ավտոմեքենաներ, դիմանկարներ և բնություն։ Լույս, զգացմունք և բնավորություն յուրաքանչյուր կադրում։",b1:"Պատվիրել նկարահանում",b2:"Պորտֆոլիո",sc:"Ոլորել",strip:"Ավտոնկարահանում &nbsp;·&nbsp; Դիմանկար &nbsp;·&nbsp; Լայֆսթայլ &nbsp;·&nbsp; Բնություն &nbsp;·&nbsp; Ոսկե ժամ",n1:"Աշխատանքներ",n2:"Ծառայություններ",n3:"Գործընթաց",n4:"Իմ մասին",n5:"Պատվեր",orn:"Պորտֆոլիո",wh:"Իմ <em>աշխատանքները</em>",ws:"Կադրեր, որտեղ լույսը պատմում է պատմություն։ Սեղմեք լուսանկարի վրա՝ մեծացնելու համար։",c1:"Մայրամուտ",c2:"Մանրամասներ",c3:"Կադրից դուրս",c4:"Ջրի մոտ",c5:"Անտառում",c6:"Հանդիպում",c7:"Հակալույս",c8:"Մառախուղ",c9:"Լեռներում",c10:"Նկարահանման վայրում",q:"Լուսանկարը այն է, ինչ մնում է, երբ լույսը հեռանում է",qa:"Էդուարդ Մամիկոնյան",sve:"Ինչ եմ նկարահանում",svh:"Ծառայություններ",svs:"Արժեքը կախված է խնդրից և վայրից։ Գրեք ինձ, և ես կհաշվարկեմ։",s1:"Ավտոնկարահանում",s1d:"Ավտոմեքենաների լուսանկար և տեսանյութ մայրամուտին, քաղաքում կամ լոկացիայում։ Անկյուններ, մանրամասներ, մթնոլորտ։",s2:"Դիմանկար և լայֆսթայլ",s2d:"Մարդկանց և զույգերի նկարահանում։ Բնական զգացմունքներ, մտածված լույս և կերպար։",s3:"Բնություն և ելքեր",s3d:"Նկարահանում լեռներում, ջրի մոտ, անտառում։ Բնապատկերներ, ճանապարհորդություններ, ակտիվ հանգիստ։",s4:"Բրենդի կոնտենտ",s4d:"Լուսանկար և տեսանյութ սոցցանցերի, գովազդի և կատալոգների համար՝ միասնական ոճով։",pre:"Ինչպես է ընթանում",prh:"Աշխատանքի <em>ընթացքը</em>",prs:"Պարզ ճանապարհ առաջին հաղորդագրությունից մինչև պատրաստի կադրեր։",p1:"Հայտ",p1d:"Գրեք ինձ WhatsApp-ով կամ Telegram-ով և կարճ նկարագրեք ձեր գաղափարը։",p2:"Քննարկում",p2d:"Ընտրում ենք վայրը, ժամը և ոճը, համաձայնեցնում մանրամասներն ու արժեքը։",p3:"Նկարահանում",p3d:"Նկարում եմ լավագույն լույսի ներքո, ուղղորդում և ստեղծում եմ անհրաժեշտ տրամադրությունը։",p4:"Արդյունք",p4d:"Ընտրում և մշակում եմ լավագույն կադրերը, ապա հանձնում պատրաստի ֆայլերը։",abe:"Լուսանկարիչ",abh:"Իմ <em>մասին</em>",ab1:"Իմ անունը Էդուարդ Մամիկոնյան է։ Նկարում եմ Canon-ով, աշխատում եմ և՛ լուսանկարի, և՛ տեսանյութի հետ։",ab2:"Սիրում եմ ոսկե ժամը, կենդանի լույսը և տրամադրությամբ կադրերը։ Պատրաստ եմ մեկնել ցանկացած վայր՝ ճիշտ այն արդյունքն ստանալու համար։",sign:"Էդուարդ Էռնեստո Մամիկոնյան",abb:"Քննարկել նախագիծը",ode:"Հայտ",odh:"Պատվիրել <em>նկարահանում</em>",ods:"Լրացրեք ձևը, և կբացվի WhatsApp-ը պատրաստի հաղորդագրությամբ։ Մնում է սեղմել «Ուղարկել»։",o1:"Ավտոնկարահանում",o2:"Դիմանկար / լայֆսթայլ",o3:"Բնություն / ելք",o4:"Բրենդի կոնտենտ",o5:"Այլ",wa:"Ուղարկել WhatsApp-ով",or:"Կամ գրեք անմիջապես",foot:"Էդուարդ Էռնեստո Մամիկոնյան",phn:"Ձեր անունը",phd:"Ցանկալի ամսաթիվ և վայր",phm:"Պատմեք ձեր նախագծի մասին",title:"Էդուարդ Էռնեստո Մամիկոնյան — լուսանկարիչ · motera.visuals"}};
+var RU={};
+document.querySelectorAll('[data-i]').forEach(function(e){RU[e.dataset.i]=e.innerHTML});
+document.querySelectorAll('[data-ip]').forEach(function(e){RU[e.dataset.ip]=e.getAttribute('placeholder')});
+document.querySelectorAll('[data-ti]').forEach(function(e){RU[e.dataset.ti]=e.getAttribute('data-t')});
+RU.title=document.title;
+function setLang(l){LANG=l;var S=l=='ru'?RU:D[l];
+document.querySelectorAll('[data-i]').forEach(function(e){var v=S[e.dataset.i];if(e.dataset.rep){v=Array(+e.dataset.rep).fill(v).join(' &nbsp;·&nbsp; ')+' &nbsp;·&nbsp; '}e.innerHTML=v});
+document.querySelectorAll('[data-ip]').forEach(function(e){e.setAttribute('placeholder',S[e.dataset.ip])});
+document.querySelectorAll('[data-ti]').forEach(function(e){e.setAttribute('data-t',S[e.dataset.ti])});
+document.title=S.title;document.documentElement.lang=l;
+var q=document.querySelector('.quote q');if(q)q.style.quotes=l=='en'?'"\u201C" "\u201D"':'"\u00AB" "\u00BB"';
+document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l==l)});
+try{localStorage.setItem('lang',l)}catch(x){}
+upd()}
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.l)}});
+var sl=null;try{sl=localStorage.getItem('lang')}catch(x){}
+if(!sl){var nl=(navigator.language||'').slice(0,2);sl=nl=='hy'?'hy':nl=='ru'?'ru':'en'}
+setLang(sl);
 </script>
 </body>
 </html>
